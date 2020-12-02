@@ -1,41 +1,52 @@
 \section{JUDUL TUGAS AKHIR}
 
 % Ubah kalimat berikut sesuai dengan judul tugas akhir
-Kalkulasi Energi pada Roket Luar Angkasa Berbasis Anti Gravitasi
+Desain dan Implementasi Simulasi Untuk \emph{Socially Assistive Robots} Menggunakan \emph{ROS 2}
 \vspace{0.5ex}
 
 \section{RUANG LINGKUP}
 
 % Ubah daftar berikut sesuai dengan ruang lingkup tugas akhir
 \begin{enumerate}[nolistsep]
-  \item \textit{Relativitas}
-  \item \textit{Fisika Quantum}
+  \item Robotika
+  \item Simulasi
 \end{enumerate}
 
 \section{LATAR BELAKANG}
 
 % Ubah paragraf-paragraf berikut sesuai dengan latar belakang dari tugas akhir
-Pesatnya perkembangan roket yang merupakan \lipsum[1]
+Selama beberapa tahun belakang, robot telah mengalami perkembangan yang cukup signifikan dari robot besar untuk industri hingga robot kecil yang membantu pekerjaan ringan rumah tangga.
+Salah satu jenis robot yang belakangan ini mulai banyak dikembangkan tersebut adalah \emph{socially assistive robots} (\emph{SARs}).
+\emph{SARs} sendiri merupakan jenis robot yang membantu manusia melalui interaksi sosial seperti sebagai robot untuk pendamping maupun pelayan.
 
-\lipsum[2]
+Dalam pengembangannya, seringkali pengujian suatu robot, termasuk \emph{SARs}, mengalami kendala karena pengujian secara langsung beresiko merusak \emph{hardware} yang mahal.
+Selain itu robot yang dikembangkan juga akan lebih sulit untuk diubah desainnya karena pengubahan desain pada robot langsung akan memakan lebih banyak waktu dan biaya.
 
-\lipsum[3][1-10]
+Salah satu solusi untuk mengatasi masalah tersebut adalah dengan menggunakan simulasi robot.
+Simulasi robot sendiri merupakan simulasi yang digunakan untuk mensimulasikan \emph{physical robot} tanpa bergantung terhadap \emph{hardware} dari robot tersebut, sehingga bisa menghemat biaya dan waktu.
+Untuk saat ini, sudah banyak aplikasi yang bisa digunakan untuk mensimulasikan robot tersebut seperti \emph{Gazebo}, \emph{V-Rep}, \emph{Webots}, \emph{Isaac Sim}, dan lain sebagainya.
+
+Namun kendala dari simulasi yang umumnya digunakan saat ini adalah ketika mengembangkan program robot yang ada di simulasi, untuk membawanya ke robot aslinya maka diperlukan pemrograman ulang untuk robot tersebut.
+Walaupun begitu, beberapa simulasi seperti \emph{Webots} dan \emph{Isaac Sim} mengatasi masalah tersebut dengan membuat \emph{compiler} yang mampu mengubah program yang ada di simulasi ke program yang ada di robot.
+Namun kendala dari metode \emph{compiler} tersebut adalah keterbatasan robot yang bisa di-\emph{compile}, hanya robot komersial seperti \emph{Nao}, \emph{Turtlebot}, dan lain sebagainya yang bisa diubah dari simulasi ke robot aslinya.
+
+Untuk mengatasi masalah tersebut, terutama untuk pengembangan robot kustom yang dibuat sendiri, maka di tugas akhir ini saya merumuskan desain dan implementasi simulasi terutama untuk \emph{socially assistive robots} sehingga program yang ada di robot tersebut dapat dengan mudah digunakan di simulasi maupun robot aslinya.
 
 \section{PERUMUSAN MASALAH}
 
 % Ubah paragraf berikut sesuai dengan perumusan masalah dari tugas akhir
-Masalah dari penelitian ini adalah \lipsum[1][1-6]
+Masalah yang diteliti dari tugas akhir ini adalah belum adanya simulasi terutama untuk \emph{socially assistive robots} yang memudahkan pengembangan robot sehingga bisa digunakan di simulasi maupun di robot aslinya.
 
 \section{BATASAN MASALAH}
 
 % Ubah paragraf berikut sesuai dengan batasan masalah dari tugas akhir
 \begin{enumerate}[nolistsep]
-  \item Melakukan kalkulasi terhadap \lipsum[1][1]
-  \item \lipsum[1][2]
-  \item \lipsum[1][3]
+  \item Melakukan pengujian sistem di simulasi menggunakan simulator yang sudah ditentukan
+  \item Melakukan pengujian sistem di robot secara langsung
+  \item Melakukan pengujian fungsionalitas sensor yang dimiliki robot (kamera, \emph{IMU}, dsb.)
 \end{enumerate}
 
 \section{TUJUAN TUGAS AKHIR}
 
 % Ubah paragraf berikut sesuai dengan tujuan tugas akhir
-Tujuan dari penelitian ini adalah \lipsum[1][1-6]
+Tujuan dari tugas akhir ini adalah untuk memudahkan pengembangan robot, terutama untuk \emph{socially assistive robots} yang menggunakan simulasi sehingga program yang ada di simulasi bisa digunakan juga di robot aslinya.

@@ -2,22 +2,21 @@
 
 \subsection{Latar Belakang}
 
-Selama beberapa tahun belakang, robot telah mengalami perkembangan yang cukup signifikan dari robot besar untuk industri hingga robot kecil yang membantu pekerjaan ringan rumah tangga.
-Salah satu jenis robot yang belakangan ini mulai banyak dikembangkan tersebut adalah \emph{socially assistive robots} (\emph{SARs}).
-\emph{SARs} sendiri merupakan jenis robot yang membantu manusia melalui interaksi sosial seperti sebagai robot untuk pendamping maupun pelayan.
+Selama beberapa tahun terakhir, robot telah mengalami perkembangan yang signifikan dari robot beroda untuk edukasi \citep{Goncalves2009} hingga robot manipulator untuk skala industri \citep{Blatnicky2020}.
+Salah satu bentuk perkembangan lain dari robot tersebut adalah \emph{socially assistive robots} (SARs).
+SARs merupakan jenis robot dalam bidang \emph{socially assistive robotics} yang menggabungkan aspek yang ada pada \emph{assistive robotics} dan \emph{socially interactive robotics} sehingga menjadikan SARs sebagai robot yang mampu memberikan bantuan kepada pengguna dalam bentuk interaksi sosial \citep{Seifer2005}.
 
-Dalam pengembangannya, seringkali pengujian suatu robot, termasuk \emph{SARs}, mengalami kendala karena pengujian secara langsung beresiko merusak \emph{hardware} yang mahal.
-Selain itu robot yang dikembangkan juga akan lebih sulit untuk diubah desainnya karena pengubahan desain pada robot langsung akan memakan lebih banyak waktu dan biaya.
+Namun, karena sifat dari SARs yang melibatkan interaksi langsung dengan pengguna, maka, pengujian dari robot akan menjadi sulit dan beresiko bagi pengguna yang ikut terlibat dalam pengujian tersebut \citep{Erickson2020}.
+Salah satu solusi untuk mengatasi hal tersebut adalah dengan melakukan pengujian secara virtual melalui simulasi robot.
+Selain bisa meminimalisir resiko, penggunaan simulasi robot sebagai media pengujian robot juga bisa mengurangi biaya yang dibutuhkan dan menghemat waktu pengujian selama pengembangan robot tersebut \citep{Takaya2016}.
 
-Salah satu solusi untuk mengatasi masalah tersebut adalah dengan menggunakan simulasi robot.
-Simulasi robot sendiri merupakan simulasi yang digunakan untuk mensimulasikan \emph{physical robot} tanpa bergantung terhadap \emph{hardware} dari robot tersebut, sehingga bisa menghemat biaya dan waktu.
-Untuk saat ini, sudah banyak aplikasi yang bisa digunakan untuk mensimulasikan robot tersebut seperti \emph{Gazebo}, \emph{V-Rep}, \emph{Webots}, \emph{Isaac Sim}, dan lain sebagainya.
+Hingga saat ini sudah ada beberapa simulator yang bisa digunakan untuk menjalankan simulasi robot seperti Webots \citep{Michel2004}, Gazebo \citep{Koenig2004}, V-REP \citep{Rohmer2013}, OpenAI Gym \citep{Brockman2016}, dan lain sebagainya.
+Namun, simulator-simulator yang sudah dijelaskan sebelumnya hanyalah platform yang secara umum digunakan untuk membantu pengembangan robot melalui simulasi virtual.
+Sedangkan pengembangan dari lingkungan simulasi dan controller robot untuk simulasi tersebut harus dibuat sendiri oleh pengembang robot.
 
-Namun kendala dari simulasi yang umumnya digunakan saat ini adalah ketika mengembangkan program robot yang ada di simulasi, untuk membawanya ke robot aslinya maka diperlukan pemrograman ulang untuk robot tersebut.
-Walaupun begitu, beberapa simulasi seperti \emph{Webots} dan \emph{Isaac Sim} mengatasi masalah tersebut dengan membuat \emph{compiler} yang mampu mengubah program yang ada di simulasi ke program yang ada di robot.
-Namun kendala dari metode \emph{compiler} tersebut adalah keterbatasan robot yang bisa di-\emph{compile}, hanya robot komersial seperti \emph{Nao}, \emph{Turtlebot}, dan lain sebagainya yang bisa diubah dari simulasi ke robot aslinya.
-
-Untuk mengatasi masalah tersebut, terutama untuk pengembangan robot kustom yang dibuat sendiri, maka di penelitian ini saya merumuskan desain dan implementasi simulasi terutama untuk \emph{socially assistive robots} sehingga program yang ada di robot tersebut dapat dengan mudah digunakan di simulasi maupun robot aslinya.
+Untuk itu, pada tugas akhir ini saya mengajukan penelitian terkait pengembangan lingkungan simulasi untuk pengujian SARs menggunakan ROS 2 dan Gazebo.
+ROS 2 dan Gazebo sendiri dipilih karena tersedianya banyak library yang dapat membantu pengembangan maupun pengujian robot, terutama untuk simulasi.
+Selain itu, dengan adanya ROS 2, controller robot yang diuji melalui simulasi bisa dengan mudah dipindahkan ke robot fisik untuk diuji secara langsung pada pengguna \citep{Takaya2016}.
 
 \subsection{Rumusan Masalah}
 

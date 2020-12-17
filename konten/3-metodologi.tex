@@ -16,9 +16,22 @@ Robot ini dilengkapi dengan beberapa sensor seperti IMU (\emph{inertial measurem
 Selain itu robot ini juga dilengkapi dengan dua lengan seperti robot manipulator yang bisa diatur pada berbagai posisi dan orientasi \citep{Iqbal2012}.
 Dengan adanya sensor dan lengan ini diharapkan robot mampu melakukan tindakan assistive secara sosial sesuai dengan data yang didapatkan dari sensor yang ada.
 
-\subsection{Pengembangan Sistem Robot}
+\subsection{Pengembangan Controller Robot}
 
-Sistem robot dikembangkan menggunakan \emph{ROS 2}.
+\begin{figure} [ht] \centering
+	\includegraphics[scale=0.45]{gambar/robot-controller.png}
+	\caption{Diagram sistem controller robot}
+	\label{fig:RobotController}
+\end{figure}
+
+Controller robot yang digunakan untuk simulasi akan dikembangkan menggunakan ROS 2.
+Controller tersebut akan dipisah menjadi beberapa node seperti yang terlihat pada gambar \ref{fig:RobotController}.
+Setiap node yang ada akan terhubung satu sama lain menggunakan sistem komunikasi antar proses ROS 2 yang berupa topics dan services.
+
+Bagian utama dari controller robot tersebut adalah node Behavior yang berisi program yang mengatur segala tindakan robot berdasarkan data yang didapat dari sensor yang ada di simulasi.
+Kemudian node Behavior tersebut akan terhubung dengan empat node lain yang merepresentasikan sensor dan aktuator yang ada pada robot.
+Keempat node tersebut adalah node IMU yang akan memproses data dari sensor IMU yang ada di robot, node Vision yang akan memproses program visi komputer menggunakan gambar yang didapat dari kamera robot, node Navigation yang mengatur pergerakan robot, dan node Manipulator yang mengatur posisi dan orientasi dari lengan robot.
+Terakhir, keempat node sensor dan aktuator tersebut akan terhubung dengan node Simulator, yang dalam hal ini adalah simulator Gazebo.
 
 \subsection{Pembuatan Lingkungan Simulasi}
 

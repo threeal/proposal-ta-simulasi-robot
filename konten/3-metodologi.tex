@@ -35,8 +35,16 @@ Terakhir, keempat node sensor dan aktuator tersebut akan terhubung dengan node S
 
 \subsection{Pembuatan Lingkungan Simulasi}
 
-Lingkungan simulasi dibuat menggunakan \emph{Gazebo}.
+Lingkungan simulasi yang digunakan akan dibuat pada simulator Gazebo.
+Nantinya, lingkungan simulasi tersebut akan mensimulasikan lingkungan dari ruang tamu yang terdiri atas beberapa objek seperti meja, kursi, lemari, dan lain sebagainya.
+Selain objek-objek tersebut, juga ada objek yang mensimulasikan robot dan pengguna dalam bentuk manusia.
+Berbeda dengan objek lain yang bersifat statis, objek robot dan pengguna tersebut akan dibuat sehingga mampu bergerak di lingkungan simulasi serta merubah pose sesuai dengan pengujian yang akan dilakukan.
+Sebagai tambahan, objek robot juga akan memiliki sensor virtual yang berupa sensor yang dibutuhkan oleh robot, yakni sensor IMU dan kamera.
 
-\subsection{Pengujian Sistem Robot terhadap Lingkungan Simulasi}
+\subsection{Pengujian Robot pada Lingkungan Simulasi}
 
-Pengujian sistem robot akan dilakukan untuk setiap fungsionalitas yang dimiliki robot.
+Pengujian robot pada lingkungan simulasi akan dilakukan dengan cara menjalankan controller robot yang sudah dikembangkan dengan lingkungan simulasi yang sudah dibuat.
+Pengujian tersebut akan dilakukan dalam dua tahap berbeda, tahap pertama akan menguji navigasi dari robot dengan cara memerintahkan robot untuk bergerak dari suatu titik ke titik yang lain.
+Pengujian ini dilakukan untuk menguji apakah sensor IMU dan pergerakan yang dimiliki robot dapat bekerja dengan benar.
+Kemudian tahap kedua akan menguji program visi komputer dari robot dengan cara mendeteksi objek pengguna yang terlihat di kamera dan mengubah pose lengan jika objek pengguna tersebut terdeteksi.
+Pengujian ini dilakukan untuk menguji apakah sensor kamera dan program manipulasi lengan yang dimiliki robot dapat bekerja dengan benar.

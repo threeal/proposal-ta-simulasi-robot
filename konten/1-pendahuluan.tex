@@ -12,19 +12,19 @@ Selain bisa meminimalisir resiko, penggunaan simulasi robot sebagai media penguj
 
 Hingga saat ini sudah ada beberapa simulator yang bisa digunakan untuk menjalankan simulasi robot seperti Webots \citep{Michel2004}, Gazebo \citep{Koenig2004}, V-REP \citep{Rohmer2013}, OpenAI Gym \citep{Brockman2016}, dan lain sebagainya.
 Namun, simulator-simulator tersebut hanyalah platform yang secara umum digunakan untuk membantu pengembangan robot melalui simulasi virtual.
-Sedangkan pengembangan dari lingkungan simulasi dan controller robot untuk simulasi tersebut harus dibuat sendiri oleh pengembang robot.
+Sedangkan pengembangan dari lingkungan simulasi dan kontroler robot untuk simulasi tersebut harus dibuat sendiri oleh pengembang robot.
 
 Untuk itu, pada penelitian ini kami mengajukan penelitian terkait pengembangan lingkungan simulasi untuk pengujian SARs menggunakan ROS 2 dan Gazebo.
 ROS 2 dan Gazebo sendiri dipilih karena tersedianya banyak library yang dapat membantu pengembangan maupun pengujian robot, terutama untuk simulasi.
-Selain itu, dengan adanya ROS 2, controller robot yang diuji melalui simulasi bisa dengan mudah dipindahkan ke robot fisik untuk diuji secara langsung pada pengguna \citep{Takaya2016}.
+Selain itu, dengan adanya ROS 2, kontroler robot yang diuji melalui simulasi bisa dengan mudah dipindahkan ke robot fisik untuk diuji secara langsung pada pengguna \citep{Takaya2016}.
 
 \subsection{Penelitian Terkait}
 
 Beberapa penelitian sebelumnya telah berhasil dalam mengembangkan lingkungan simulasi untuk robot menggunakan ROS (Pendahulu ROS 2) dan Gazebo.
 Seperti yang dilakukan Qian et al. \citep{Qian2014} yang mengembangkan simulasi untuk robot manipulator, Zhang et al. \citep{Zhang2015} yang mengembangkan simulasi untuk robot quadrotor UAV, dan Takaya et al. \citep{Takaya2016} yang mengembangkan lingkungan simulasi untuk pengujian terhadap mobile robot.
-Namun, berbeda dengan penelitian yang telah dilakukan sebelumnya, penelitian yang akan kami lakukan memilih menggunakan ROS 2 agar controller robot yang dibuat untuk simulasi memiliki performa yang lebih baik serta dapat bekerja secara \emph{real-time} \citep{Maruyama2016}.
+Namun, berbeda dengan penelitian yang telah dilakukan sebelumnya, penelitian yang akan kami lakukan memilih menggunakan ROS 2 agar kontroler robot yang dibuat untuk simulasi memiliki performa yang lebih baik serta dapat bekerja secara real-time \citep{Maruyama2016}.
 
-Selain itu, penelitian lain juga telah dilakukan oleh Erickson et al. \citep{Erickson2020} yang mengembangkan Assistive Gym, sebuah framework simulasi untuk assistive robotics berbasis OpenAI Gym.
+Selain itu, penelitian lain juga telah dilakukan oleh Erickson et al. \citep{Erickson2020} yang mengembangkan Assistive Gym, sebuah framework simulasi untuk \emph{assistive robotics} berbasis OpenAI Gym.
 Framework simulasi tersebut kemudian digunakan oleh Clegg et al. \citep{Clegg2020} untuk mengembangkan metode learning melalui simulasi pada kolaborasi antara robot dengan manusia dalam membantu pemakaian baju pada manusia.
-Namun, karena tidak menggunakan ROS, controller robot yang dibuat untuk simulasi yang menggunakan framework tersebut perlu dibuat ulang ketika akan diujikan secara langsung pada pengguna menggunakan robot fisik.
+Namun, karena tidak menggunakan ROS, kontroler robot yang dibuat untuk simulasi yang menggunakan framework tersebut perlu dibuat ulang ketika akan diujikan secara langsung pada pengguna menggunakan robot fisik.
 Walaupun begitu, penelitian yang dilakukan oleh Zamora et al. \citep{Zamora2016} menunjukkan bahwa simulasi yang ada pada OpenAI Gym juga bisa diintegrasikan pada ROS dan Gazebo, sehingga tidak menutup kemungkinan bahwa Assistive Gym juga bisa digunakan bersamaan dengan ROS 2 dan Gazebo.

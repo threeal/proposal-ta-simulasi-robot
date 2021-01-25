@@ -8,9 +8,8 @@
 	\label{fig:RobotsCategory}
 \end{figure}
 
-\emph{Socially Assistive Robots} (SARs) merupakan adaptasi dari \emph{assistive technology} yang meliputi keseluruhan sistem robotika yang mampu memberikan bantuan kepada pengguna dalam bentuk interaksi sosial \citep{Seifer2005}.
-Heerink et al. \citep{Heerink2010} mengategorikan riset terhadap SARs menjadi dua kategori berbeda seperti pada gambar \ref{fig:RobotsCategory}.
-Kategori pertama mencakup robot yang menawarkan bantuan fisik dan kognitif yang melakukan tugas sebagai pelayan, sedangkan kategori kedua mencakup robot berjenis pendamping sebagai sahabat dan media untuk terapi.
+\emph{Socially Assistive Robots} (SARs) merupakan adaptasi dari \emph{assistive technology} yang meliputi keseluruhan sistem robotika yang mampu memberikan bantuan kepada pengguna dalam bentuk interaksi sosial \citep{Seifer2005}. Heerink et al. \citep{Heerink2010} mengategorikan riset terhadap SARs menjadi dua kategori berbeda seperti pada Gambar \ref{fig:RobotsCategory}.
+Kategori pertama mencakup \emph{service robots} yang menawarkan bantuan fisik dan kognitif dan melakukan tugas sebagai pelayan, sedangkan kategori kedua mencakup \emph{companion robot} yang merupakan robot berjenis pendamping sebagai sahabat dan media untuk terapi.
 Lebih lanjut Rich et al. \citep{Rich2009} menjelaskan SARs mampu memberikan bantuan kepada pengguna dalam berbagai tingkatan seperti:
 (a) mendukung kemampuan fungsional dan kognitif pengguna;
 (b) menawarkan pengguna kesempatan untuk meningkatkan partisipasi sosial dan kesehatan psikologis;
@@ -21,16 +20,16 @@ dan (d) membina pengguna untuk memfasilitasi promosi perilaku sehat dan pencapai
 
 \begin{figure} [ht] \centering
 	\includegraphics[scale=0.45]{gambar/ros-communication.png}
-	\caption{Diagram komunikasi antar node pada ROS \citep{Ros2Nodes}}
+	\caption{Diagram komunikasi antar node pada ROS 2 \citep{Ros2Nodes}}
 	\label{fig:RosCommunication}
 \end{figure}
 
 Robot Operating System (ROS) \citep{Quigley2009} merupakan kumpulan dari libraries, drivers, dan tools yang mempermudah pengembangan sistem pada robot.
 ROS memiliki command tool seperti Linux, sistem komunikasi antar proses, dan berbagai macam packages yang berhubungan dengan pengembangan sistem pada robot.
-Seperti pada gambar \ref{fig:RosCommunication}, Proses yang dieksekusi pada ROS disebut sebagai Node, komunikasi antar proses yang dimiliki menggunakan model \emph{Publish}/\emph{Subscribe}, dan data komunikasi yang dikirimkan disebut sebagai Topic.
+Seperti pada Gambar \ref{fig:RosCommunication}, Proses yang dieksekusi pada ROS disebut sebagai Node, komunikasi antar proses yang dimiliki menggunakan model \emph{Publish/Subscribe}, dan data komunikasi yang dikirimkan disebut sebagai Topic.
 Suatu proses Publisher mampu mengirimkan satu maupun lebih Topic, kemudian proses-proses lain yang melakukan subscribe pada suatu Topic bisa memperoleh isi dari Topic tersebut.
 Selain itu ada juga Sevice yang memiliki fungsi seperti Topic, hanya saja dilakukan secara dua arah.
-Service ini bekerja menggunakan model \emph{Client}/\emph{Server} dimana Service Client akan mengirimkan data permintaan dalam bentuk Request dan kemudian Service Server akan mengirimkan data balasan dalam bentuk Response.
+Service ini bekerja menggunakan model \emph{Client/Server} dimana Service Client akan mengirimkan data permintaan dalam bentuk Request dan kemudian Service Server akan mengirimkan data balasan dalam bentuk Response.
 
 Generasi kedua dari Robot Operating System, ROS 2, merupakan kelanjutan dari ROS yang mengusung reliabilitas dan performa untuk penggunaan \emph{real-time} sembari masih mendukung keunggulan yang dimiliki oleh ROS sebelumnya \citep{Maruyama2016}.
 Untuk memenuhi kebutuhan reliabilitas dan performa untuk penggunaan real-time tersebut, ROS 2 menggunakan \emph{Data Distribution Service} (DDS) \citep{Castellote2003} \citep{Schlesselman2004}, standar industri untuk sistem komunikasi real-time dan \emph{end-to-end middleware}, yang menggantikan sistem komunikasi antar proses yang dimiliki ROS sebelumnya.
@@ -38,7 +37,7 @@ Untuk memenuhi kebutuhan reliabilitas dan performa untuk penggunaan real-time te
 \subsection{Gazebo}
 
 Gazebo \citep{Koenig2004} merupakan bagian dari Player Project \citep{Gerkey2003} yang memungkinkan sebuah simulasi robot dan aplikasi sensor bekerja di lingkungan simulasi indoor maupun outdoor tiga dimensi.
-Gazebo memiliki arsitektur Client/Server dan model Publish/Subscribe untuk sistem komunikasi antar prosesnya.
-Setiap objek simulasi di Gazebo dapat diasosiasikan dalam satu maupun lebih controllers yang akan memproses perintah untuk mengatur dan menentukan keadaan dari suatu objek.
-Data yang dihasilkan oleh suatu controller akan dikirim ke \emph{shared memory} menggunakan Gazebo interfaces (ifaces).
-Nantinya ifaces dari proses-proses lain dapat membaca data tersebut pada shared memory, sehingga memungkinkan komunikasi antar proses antara program yang mengontrol robot dan Gazebo, terlepas dari bahasa pemrograman maupun perangkat komputer yang digunakan.
+Gazebo memiliki arsitektur \emph{Client/Server} dan model \emph{Publish/Subscribe} untuk sistem komunikasi antar prosesnya.
+Setiap objek simulasi di Gazebo dapat diasosiasikan dalam satu maupun lebih kontroler yang akan memproses perintah untuk mengatur dan menentukan keadaan dari suatu objek.
+Data yang dihasilkan oleh suatu kontroler akan dikirim ke \emph{shared memory} menggunakan Gazebo interfaces (ifaces).
+Nantinya ifaces dari proses-proses lain dapat membaca data tersebut pada shared memory, sehingga memungkinkan komunikasi antar proses antara program yang mengontrol robot dan Gazebo, terlepas dari bahasa pemrograman yang digunakan.
